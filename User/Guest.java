@@ -1,6 +1,9 @@
 package User;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -33,6 +36,19 @@ public class Guest extends User{
 		viewList.put(User.INPUT_TYPE.MENU_SEASON.getType(), 		new MenuSeasonView());
 		viewList.put(User.INPUT_TYPE.MENU_PAY.getType(), 			new MenuPayView());
 	}
+
+	public View getProcess(int index) {
+		Set set = viewList.entrySet();
+		Iterator iter = set.iterator();
+		while(iter.hasNext()) {
+			Map.Entry<Integer, View> temp = (Map.Entry<Integer, View>)iter.next();
+			if(index == temp.getKey())
+				return temp.getValue();
+		}
+		
+		return null;
+	}
+
 	
 	@Override
 	public INPUT_TYPE mainMenu()  throws Exception{
@@ -61,7 +77,7 @@ public class Guest extends User{
 		return false;	
 	}
 
-	@Override
+	/*@Override
 	public Menu menuChoice(int menutype) throws Exception{
 		int choiceCategory = inputMenu(menutype);
 		if(-1 == choiceCategory){
@@ -182,5 +198,5 @@ public class Guest extends User{
 		InfoManager.getInst().saveUser();
 
 		System.out.println(" 축하합니다 회원가입 되었습니다");
-	}
+	}*/
 }

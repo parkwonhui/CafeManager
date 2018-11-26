@@ -2,13 +2,22 @@ package User;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 import AdminView.View;
 import CafeManagement.Manager;
-import GuestView.JoinView;
 import Info.InfoManager;
 import Info.UserInfo;
+import LoginView.LoginView;
+import LoginView.LogoutView;
+import LoginView.MenuCoffeeView;
+import LoginView.MenuDessertView;
+import LoginView.MenuPayView;
+import LoginView.MenuSeasonView;
+import LoginView.MyMenuModifyView;
+import LoginView.MyMenuView;
 import Menu.Coffee;
 import Menu.Dessert;
 import Menu.Menu;
@@ -28,9 +37,28 @@ public class Login extends User {
 		this.userInfo = user;
 		
 		viewList = new HashMap<>();
-		viewList.put(User.INPUT_TYPE.JOIN.getType(), 				new JoinView());
+		viewList.put(User.INPUT_TYPE.LOGIN.getType(), 				new LoginView());
+		viewList.put(User.INPUT_TYPE.LOGOUT.getType(), 				new LogoutView());
+		viewList.put(User.INPUT_TYPE.MENU_COFFEE.getType(), 		new MenuCoffeeView());
+		viewList.put(User.INPUT_TYPE.MENU_DESSERT.getType(), 		new MenuDessertView());
+		viewList.put(User.INPUT_TYPE.MENU_SEASON.getType(), 		new MenuSeasonView());
+		viewList.put(User.INPUT_TYPE.MENU_PAY.getType(), 			new MenuPayView());
+		viewList.put(User.INPUT_TYPE.MY_MENU.getType(), 			new MyMenuView());
+		viewList.put(User.INPUT_TYPE.MY_MENU_MODIFY.getType(), 		new MyMenuModifyView());
 	}
 	
+	public View getProcess(int index) {
+		Set set = viewList.entrySet();
+		Iterator iter = set.iterator();
+		while(iter.hasNext()) {
+			Map.Entry<Integer, View> temp = (Map.Entry<Integer, View>)iter.next();
+			if(index == temp.getKey())
+				return temp.getValue();
+		}
+		
+		return null;
+	}
+
 	public void SetMyMenu(Menu menu) throws Exception{
 		myMenu = menu;	
 	}
@@ -62,7 +90,7 @@ public class Login extends User {
 	public boolean logout() throws Exception {
 		return true;	
 	}
-	public void viewMenu() throws Exception{}
+	/*public void viewMenu() throws Exception{}
 	
 	@Override	
 	public Menu menuChoice(int menutype) throws Exception{
@@ -190,6 +218,9 @@ public class Login extends User {
 			System.out.println(" myMenu가 없습니다");
 	}
 	
+	public void join() throws Exception{}
+	*/
+	
 	public boolean checkInputMenu(final int index, final int menuType) throws Exception{
 		Menu menu = InfoManager.getInst().searchMenu(index);
 		if(menuType != menu.getType())
@@ -205,8 +236,6 @@ public class Login extends User {
 	public String getPass(){
 		return userInfo.getPass();
 	}	
-	
-	public void join() throws Exception{}
 	
 	public Menu getMyMenu() {
 		return myMenu;

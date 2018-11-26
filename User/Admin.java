@@ -3,6 +3,9 @@ package User;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 import CafeManagement.Manager;
 import Info.InfoManager;
@@ -40,6 +43,19 @@ public class Admin extends User{
 		
 	}
 
+	public View getProcess(int index) {
+		Set set = viewList.entrySet();
+		Iterator iter = set.iterator();
+		while(iter.hasNext()) {
+			Map.Entry<Integer, View> temp = (Map.Entry<Integer, View>)iter.next();
+			if(index == temp.getKey())
+				return temp.getValue();
+		}
+		
+		return null;
+	}
+
+	
 	@Override
 	public INPUT_TYPE mainMenu() throws Exception{
 		System.out.println("[관리자모드/매장관리] 1.메뉴추가 2.메뉴수정 3.메뉴삭제 4.회원검색 5.재고관리 6.매출 7.로그아웃");
@@ -72,7 +88,7 @@ public class Admin extends User{
 		return true;	
 	}
 
-
+/*
 	@Override
 	public Menu menuChoice(int menutype){return null;}
 	
@@ -157,8 +173,11 @@ public class Admin extends User{
 			login.printInfo();
 		}
 	}
+	
+	
+	public void join() throws Exception{}*/
 
-	@Override
+	//@Override
 	public void adminMenuCount() throws Exception{
 		InfoManager.getInst().PrintStock();
 	}
@@ -178,7 +197,4 @@ public class Admin extends User{
 		return userInfo.getPass();
 	}
 
-	public void join() throws Exception{
-		
-	}
 }
