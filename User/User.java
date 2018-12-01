@@ -49,16 +49,4 @@ public abstract  class User {
 	public abstract View getProcess(int index) throws Exception;
 	public abstract boolean login() throws Exception;
 	public abstract boolean logout() throws Exception;					// 결과값으로 로그아웃되면 manager roop를 벗어난다
-	/*public abstract Menu menuChoice(int menutype) throws Exception;		// 메뉴 선택(3개 메뉴 한방에 출력하자)	 
-	public abstract void viewMenu() throws Exception;					// 메뉴 전체 출력	
-	public abstract void myMenuPrint() throws Exception;
-	public abstract void myMenuModify() throws Exception;
-	public abstract void adminMenuAdd() throws Exception;
-	public abstract void adminMenuModify() throws Exception;
-	public abstract void adminMenuDelete() throws Exception;
-	public abstract void adminUserSearch() throws Exception;
-	public abstract void adminMenuCount() throws Exception;
-	public abstract void join() throws Exception;						// 회원가입	
-	public abstract boolean isPassEquals(String pass);
-	*/
 }
