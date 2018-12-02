@@ -15,7 +15,7 @@ public class MenuDessertView implements View{
 	public int view(final Manager manager, final User user) throws Exception {
 		final int menutype = Menu.MENUTYPE_DESSERT;
 		
-		Menu menu =user.menuChoice(menutype);	// 커피메뉴(논커피도 있지만 일단 네임을 이렇게 만든다)
+		Menu menu = menuChoice(menutype);	// 커피메뉴(논커피도 있지만 일단 네임을 이렇게 만든다)
 		if(null == menu){
 			throw new Exception("메뉴 번호를 잘못 입력하였습니다");
 		}
