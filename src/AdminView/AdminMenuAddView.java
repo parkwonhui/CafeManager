@@ -6,7 +6,7 @@ import Menu.Menu;
 import ScannerManager.ScannerManager;
 import User.User;
 
-public class AdminMenuAddView implements View{
+public class AdminMenuAddView extends View{
 	@Override
 	public int view(final Manager manager, final User user) throws Exception{
 		 System.out.println("메뉴 이름 :");

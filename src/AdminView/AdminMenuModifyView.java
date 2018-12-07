@@ -7,7 +7,7 @@ import Menu.Menu;
 import ScannerManager.ScannerManager;
 import User.User;
 
-public class AdminMenuModifyView implements View {
+public class AdminMenuModifyView extends View {
 
 	@Override
 	public int view(final Manager manager, final User user) throws Exception{

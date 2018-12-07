@@ -6,7 +6,7 @@ import Menu.Menu;
 import User.Login;
 import User.User;
 
-public class MyMenuView implements View{
+public class MyMenuView extends View{
 
 	@Override
 	public int view(Manager manager, User user) throws Exception {

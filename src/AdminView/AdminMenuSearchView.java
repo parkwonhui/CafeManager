@@ -6,7 +6,7 @@ import ScannerManager.ScannerManager;
 import User.Login;
 import User.User;
 
-public class AdminMenuSearchView implements View{
+public class AdminMenuSearchView extends View{
 
 	@Override
 	public int view(final Manager manager, final User user) throws Exception{

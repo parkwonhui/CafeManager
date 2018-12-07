@@ -5,7 +5,7 @@ import CafeManagement.Manager;
 import Save.SaveManager;
 import User.User;
 
-public class MenuPayView implements View{
+public class MenuPayView extends View{
 
 	@Override
 	public int view(final Manager manager, final User user) throws Exception {
