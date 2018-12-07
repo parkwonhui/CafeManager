@@ -6,7 +6,7 @@ import ScannerManager.ScannerManager;
 import User.User;
 import User.User.INPUT_TYPE;
 
-public class MenuView implements View {
+public class MenuView extends View {
 
 	@Override
 	public int view(final Manager manager, final User user) throws Exception{

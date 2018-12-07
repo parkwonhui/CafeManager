@@ -4,7 +4,7 @@ import AdminView.View;
 import CafeManagement.Manager;
 import User.User;
 
-public class LogoutView implements View{
+public class LogoutView extends View{
 
 	@Override
 	public int view(Manager manager, User user) throws Exception {
