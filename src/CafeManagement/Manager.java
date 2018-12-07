@@ -38,8 +38,9 @@ public class Manager {
 				if (true == isLogout(user, inputType)) // 로그아웃일 때 빼져나온다
 					return LOGIN_STATE.LOGOUT;
 				
-				if( User.INPUT_TYPE.LOGIN == inputType &&true == user.login())
+				if(true == isLogin(user, inputType)) {
 					return LOGIN_STATE.LOGIN;
+				}
 				
 				View view = user.getProcess(inputType.getType());
 				if(null == view)
@@ -61,6 +62,14 @@ public class Manager {
 			return false;
 		
 		return user.logout();
+	}
+	
+	public boolean isLogin(final User user, final INPUT_TYPE inputype) throws Exception {
+		if(INPUT_TYPE.LOGIN != inputype) {
+			return false;
+		}
+		
+		return user.login();
 	}
 	
 	public void addTotalMoney(final int money){
