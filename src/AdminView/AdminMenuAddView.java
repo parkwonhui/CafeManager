@@ -7,7 +7,6 @@ import ScannerManager.ScannerManager;
 import User.User;
 
 public class AdminMenuAddView implements View{
-sdfadfs
 	@Override
 	public int view(final Manager manager, final User user) throws Exception{
 		 System.out.println("메뉴 이름 :");

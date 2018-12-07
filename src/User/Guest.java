@@ -76,6 +76,12 @@ public class Guest extends User{
 	public boolean logout()  throws Exception{
 		return false;	
 	}
+	
+	// guest는 비밀번호와 상관없다
+	public boolean isPassEquals(String pass) {
+		return false;
+	}
+	
 
 	/*@Override
 	public Menu menuChoice(int menutype) throws Exception{
@@ -157,11 +163,6 @@ public class Guest extends User{
 		coffee.setOption(bSizeup, bAddShot, bWhippedCream, bSyrup);
 	}
 
-	// guest는 비밀번호와 상관없다
-	public boolean isPassEquals(String pass) {
-		return false;
-	}
-	
 	public boolean checkInputMenu(final int index, final int menuType) throws Exception{
 		Menu menu = InfoManager.getInst().searchMenu(index);
 		if(null == menu)

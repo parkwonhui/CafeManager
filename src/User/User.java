@@ -49,4 +49,6 @@ public abstract  class User {
 	public abstract View getProcess(int index) throws Exception;
 	public abstract boolean login() throws Exception;
 	public abstract boolean logout() throws Exception;					// 결과값으로 로그아웃되면 manager roop를 벗어난다
+
+	public abstract boolean isPassEquals(final String pass); 
 }

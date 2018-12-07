@@ -202,12 +202,9 @@ public class Login extends User {
 		coffee.setOption(bSizeup, bAddShot, bWhippedCream, bSyrup);
 	}
 	
-	public boolean isPassEquals(final String pass) {
-		if(true == pass.equals(userInfo.getPass()))
-			return true;
-
-		return false;
-	}
+	
+	public void join() throws Exception{}
+	*/
 	
 	public void printInfo(){
 		System.out.print("id:"+userInfo.getId());
@@ -218,8 +215,12 @@ public class Login extends User {
 			System.out.println(" myMenu가 없습니다");
 	}
 	
-	public void join() throws Exception{}
-	*/
+	public boolean isPassEquals(final String pass) {
+		if(true == pass.equals(userInfo.getPass()))
+			return true;
+
+		return false;
+	}
 	
 	public boolean checkInputMenu(final int index, final int menuType) throws Exception{
 		Menu menu = InfoManager.getInst().searchMenu(index);
