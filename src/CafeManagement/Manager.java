@@ -1,21 +1,11 @@
 package CafeManagement;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import AdminView.View;
-import Info.InfoManager;
-import Menu.Coffee;
 import Menu.Menu;
-import Menu.NonCoffee;
 import User.User;
 import User.User.INPUT_TYPE;
 import User.User.LOGIN_STATE;
-import Menu.Dessert;
 import Save.SaveManager;
-import ScannerManager.ScannerManager;
 
 public class Manager {
 	

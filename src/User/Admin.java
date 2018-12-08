@@ -1,20 +1,12 @@
 package User;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
-
-import CafeManagement.Manager;
 import Info.InfoManager;
 import Info.UserInfo;
-import Menu.Coffee;
-import Menu.Dessert;
-import Menu.Menu;
 import ScannerManager.ScannerManager;
-import User.User.INPUT_TYPE;
 import AdminView.AdminMenuAddView;
 import AdminView.AdminMenuCountView;
 import AdminView.AdminMenuDeleteView;

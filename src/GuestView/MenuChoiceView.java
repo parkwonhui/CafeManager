@@ -2,11 +2,6 @@ package GuestView;
 
 import AdminView.View;
 import CafeManagement.Manager;
-import Info.InfoManager;
-import Menu.Coffee;
-import Menu.Dessert;
-import Menu.Menu;
-import ScannerManager.ScannerManager;
 import User.User;
 
 public class MenuChoiceView extends View{

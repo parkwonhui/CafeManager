@@ -1,13 +1,10 @@
 package User;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
-
 import AdminView.View;
-import CafeManagement.Manager;
 import Info.InfoManager;
 import Info.UserInfo;
 import LoginView.LoginView;
@@ -18,11 +15,8 @@ import LoginView.MenuPayView;
 import LoginView.MenuSeasonView;
 import LoginView.MyMenuModifyView;
 import LoginView.MyMenuView;
-import Menu.Coffee;
-import Menu.Dessert;
 import Menu.Menu;
 import ScannerManager.ScannerManager;
-import User.User.INPUT_TYPE;
 
 public class Login extends User {
 	

@@ -4,22 +4,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import GuestView.LoginView;
 import GuestView.LogoutView;
 import GuestView.MenuCoffeeView;
 import GuestView.MenuDessertView;
 import GuestView.MenuPayView;
 import AdminView.View;
-import CafeManagement.Manager;
 import GuestView.JoinView;
-import Info.InfoManager;
 import LoginView.MenuSeasonView;
-import Menu.Coffee;
-import Menu.Dessert;
-import Menu.Menu;
 import ScannerManager.ScannerManager;
 
 public class Guest extends User{

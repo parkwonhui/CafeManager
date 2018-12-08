@@ -1,8 +1,6 @@
 package User;
 
 import AdminView.View;
-import Menu.Menu;
-import User.User.INPUT_TYPE;
 
 public abstract  class User {
 	

@@ -1,10 +1,6 @@
 package CafeManagement;
 
 import Info.InfoManager;
-import User.Admin;
-import User.Guest;
-import User.Login;
-import User.User;
 
 public class Main {
 
