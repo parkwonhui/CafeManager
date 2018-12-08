@@ -7,6 +7,8 @@ import User.User;
 
 public class AdminMenuDeleteView extends View{
 
+	
+	
 	@Override
 	public int view(final Manager manager, final User user) throws Exception{
 		InfoManager.getInst().allPrint();
