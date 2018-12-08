@@ -2,6 +2,7 @@ package User;
 
 import AdminView.View;
 import Menu.Menu;
+import User.User.INPUT_TYPE;
 
 public abstract  class User {
 	
@@ -45,7 +46,7 @@ public abstract  class User {
 	public static final int TYPE_ADMIN = 1;
 
 	
-	public abstract INPUT_TYPE mainMenu() throws Exception;
+	public abstract INPUT_TYPE mainMenu()  throws Exception;
 	public abstract View getProcess(int index) throws Exception;
 	public abstract boolean login() throws Exception;
 	public abstract boolean logout() throws Exception;					// 결과값으로 로그아웃되면 manager roop를 벗어난다

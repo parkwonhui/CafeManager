@@ -53,8 +53,7 @@ public class Manager {
 			}
 		}
 		
-		//return err..
-		//return User.LOGIN_STATE.LOGOUT;
+		// NOT WHILE BREAK, NO RETURN
 	}
 	
 	public boolean isLogout(final User user, final INPUT_TYPE inputype) throws Exception {
