@@ -83,5 +83,19 @@ public class Manager {
 		return saveManager;
 	}
 	
+	public boolean isSaveBasketFull() {
+		return saveManager.isFull();
+	}
 	
+	public int getSaveMax() {
+		return saveManager.MAX_SAVE;
+	}
+	
+	public boolean saveMenu(Menu menu) {
+		return saveManager.saveMenu(menu);
+	}
+	
+	public void SaveMenuAllPrint() {
+		saveManager.allPrint();
+	}
 }

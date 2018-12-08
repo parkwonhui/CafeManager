@@ -24,8 +24,8 @@ public abstract class View {
 		}
 		
 		// 장바구니 최대 개수 체크
-		if(true == manager.GetSaveManager().isFull()){
-			System.out.println("[System] 최대 담을 수 있는 개수"+manager.GetSaveManager().MAX_SAVE+"를 넘었습니다");
+		if(true == manager.isSaveBasketFull()){
+			System.out.println("[System] 최대 담을 수 있는 개수"+manager.getSaveMax()+"를 넘었습니다");
 			return 0;
 		}
 		// 구매성공이므로 금액을 올려준다
@@ -39,9 +39,9 @@ public abstract class View {
 		findMenu.minusOneStockNum();
 
 		// 장바구니에 넣는다
-		manager.GetSaveManager().saveMenu(menu);
+		manager.saveMenu(menu);
 		System.out.println("[Success]구매완료");
-		manager.GetSaveManager().allPrint();
+		manager.SaveMenuAllPrint();
 		
 		return 0;
 	}
