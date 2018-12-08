@@ -15,7 +15,6 @@ public class Main {
 	
 	public static void main(String[] args) {
 
-
 		DataInit();					// 데이터 초기화
 		
 		LoginManager loginManager = new LoginManager();
